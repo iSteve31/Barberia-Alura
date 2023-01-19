@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Barbería Alura</title>
+    <!--Los elementos suben demasiado (posicion) con este archivo "reset.css". Comparar con margin: 0 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500&family=Kalam:wght@700&family=Montserrat:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <a class="logo">
+      <img src="./assets/logo.png" alt="Logo Barbería Alura">
+      <h1 class="company-name">Barbería Alura</h1>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <div class="back-img-contact">
+      <div class="user-contact">
+        <div class="informative">
+          <h2 class="tit">¡Reserve con Nosotros!</h2>
+          <h3 class="inf">Aquí puedes enviarnos tu consulta sobre nuestros servicios.</h3>
+        </div>
+        <div class="gnl-contact">
+          <form class="gnl-contact-form">
+            <div class="contact-details">
+              <label for="names">Nombres y Apellidos:</label>
+              <input class="textinput" id="names" type="text" required>
+              <label for="e-mail">Correo electrónico:</label>
+              <input class="textinput" id="e-mail" type="email" placeholder="email@dominio.com" required>
+              <label for="phone">Teléfono:</label>
+              <input class="textinput" id="phone" type="tel" placeholder="(XX) XXX XXX XXX" required>
+              <label for="message">Mensaje:</label>
+              <textarea class="textinput" id="message" rows="7" cols="60" placeholder="Escriba su consulta aquí..." required></textarea>
+            </div>
+
+            <fieldset class="to-contact">
+              <legend>¿Cómo le gustaría que le contactemos?</legend>
+              <label for="email"><input id="email" type="radio" name="contact" value="email">Email</label>
+              <label for="call"><input id="call" type="radio" name="contact" value="telefono">Teléfono</label>
+              <label for="app"><input id="app" type="radio" name="contact" value="whasapp" checked>Whatsapp</label>
+            </fieldset>
+
+            <fieldset class="to-schedule">
+              <legend>¿En qué horario prefiere ser atendido?</legend>
+              <select>
+                <option value="">Seleccione un horario</option>
+                <option value="manhana">Mañana</option>
+                <option value="tarde">Tarde</option>
+                <option value="noche">Noche</option>
+              </select>
+            </fieldset>
+
+            <div class="marketing">
+              <label for="news"><input id="news" type="checkbox" checked> Le gustaría recibir novedades de la Barbería Alura?</label>
+            </div>
+
+            <input class="send" type="submit" value="Enviar">
+          </form>
+          <div class="gnl-contact-schd">
+            <table>
+              <caption>Horario de atención al cliente</caption>
+              <thead class="table-head">
+                <tr>
+                  <th scope="row">Día</th>
+                  <th>Horario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Lunes</th>
+                  <td>08 - 20h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Miercoles</th>
+                  <td>08 - 20h</td>
+                </tr>
+                <tr>
+                  <th scope="row">Viernes</th>
+                  <td>08 - 20h</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <img src="./assets/logo-blanco.png" alt="Logo de la Barbería Alura">
+    <p class="copyright">&copy Copyright Barbería Alura by <em>Steve Rocha</em> - 2023</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,405 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+/*CODIFICANDO ENCABEZADO DE PÁGINAS*/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 10px;
+    /* min-height: 230px; */
+}
+header a{
+    text-decoration: none;
+}
+header .logo{
+    display: flex;
+    align-items: center;
+}
+header .logo img{
+    height: 225px;
+}
+header .logo .company-name{
+    font-family: 'Kalam', cursive;
+    font-size: 4em;
+    letter-spacing: -2px;
+    color: black;
+}
+header nav a{
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    margin-right: 20px;
+}
+header nav a:hover{
+    color: #c78c19;
+}
+@media screen and (max-width: 960px){
+    header{
+        flex-direction: column;
+    }
+    header .logo .company-name{
+        text-align: center;
+    }
+    header nav{
+        padding: 10px 0 5px;
+    }
+    header nav a{
+        margin: 0 10px 0;
+    }
+}
+@media screen and (max-width: 450px){
+    header{
+        font-size: calc(0.038 * 100vw);
+    }
+    header .logo img{
+        height: calc(0.5 * 100vw);
+    }
+}
+/*CODIFICACION PIE DE PAGINA DE LA WEB*/
+footer{
+    background-image: url(../assets/bg.jpg);
+    text-align: center;
+    padding: 15px;
+}
+footer img{
+    height: 225px;
+}
+footer .copyright{
+    color: white;
+    font-size: 0.8em;
+}
+footer .copyright em{
+    font-weight: bold;
+}
+@media screen and (max-width: 450px){
+    footer img{
+        height: calc(0.5 * 100vw);
+    }
+}
+
+/*CODIFICACION DE LA PESTAÑA "PRODUCTOS"*/
+.back-img-products{
+    background-image: url(../assets/backProducts.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.offers{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    gap: 32px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.offers .promotion{
+    width: 270px;
+    height: 382px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.offers .promotion .title{
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+.offers .promotion img{
+    width: 225px;
+}
+.offers .promotion .description{
+    font-size: 1.2em;
+}
+.offers .promotion .price{
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 8px 0;
+}
+.offers .promotion:hover{
+    border-color: #c78c19;
+    background-color: rgba(211, 211, 211, 0.7);
+}
+.offers .promotion:active{
+    border-color: #088c19;
+}
+.offers .promotion:hover .title{
+    font-size: 2.2em;
+}
+@media screen and (max-width: 940px){
+    .offers{
+        flex-wrap: wrap;
+    }
+}
+
+/*CODIFICACION DE LA PESTAÑA "CONTACTOS"*/
+.back-img-contact{
+    background-image: url(../assets/backContact.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.user-contact{
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    /*Alternativa: usar "padding" y el elemento tome el 100% de ancho, luego colocar un color de fondo con opacidad y usar el "background-image" como imagen de fondo para la decoración*/
+    padding: 0 10%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.informative{
+    padding: 50px 10px;
+    text-align: center;
+}
+.informative .tit{
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.informative .inf{
+    font-style: italic;
+}
+.gnl-contact{
+    display: flex;
+}
+.gnl-contact-form{
+    width: 60%;
+    min-width: 328px;
+}
+.gnl-contact-form label, .gnl-contact-form fieldset legend{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.gnl-contact-form .contact-details .textinput{
+    display: block;
+    font-size: 1em;
+    padding: 8px;
+    max-width: 70%;
+    min-width: 375px;
+    width: 70%;
+    margin-bottom: 30px;
+}
+.gnl-contact-form .contact-details #message{
+    font-size: 1.3em;
+}
+.gnl-contact-form .to-contact{
+    margin-bottom: 20px;
+}
+.gnl-contact-form .to-contact label{
+    font-weight: normal;
+}
+.gnl-contact-form .to-schedule{
+    margin-bottom: 20px;
+}
+.gnl-contact-form .to-schedule legend{
+    margin-bottom: 19px;
+}
+.gnl-contact-form .to-schedule select{
+    font-size: 1em;
+    padding: 2px 3px;
+    width: 50%;
+}
+.gnl-contact-form .marketing{
+    padding: 15px 0 0;
+    margin-bottom: 30px;
+}
+.gnl-contact-form .marketing label{
+    font-size: 0.9em;
+}
+.gnl-contact-form .send{
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: orange;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    margin-bottom: 50px;
+}
+.gnl-contact-form .send:hover{
+    background-color: rgb(233, 128, 0);
+}
+/*Estilizando la tabla.*/
+.gnl-contact-schd{
+    width: 40%;
+    min-width: 280px;
+}
+table{
+    letter-spacing: 0.5px;
+    margin: 0 auto 50px;
+}
+table caption{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+    color: #23333a;
+    caption-side: top;
+    padding: 0 10px 8px;
+    margin-bottom: 30px;
+    border-bottom: 2px dotted #3f87a6;
+}
+th, td{
+    padding: 10px 20px;
+}
+thead{
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+thead tr{
+    color: black;
+}
+th[scope="row"]{
+    font-weight: bold;
+    border-right: 1px solid black;
+}
+tr{
+    border-bottom: 1px solid black;
+    color: #39758f;
+}
+tbody tr:last-child{
+    border-bottom: none;
+}
+@media screen and (max-width: 880px) {
+    .gnl-contact{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gnl-contact-form .contact-details .textinput{
+        min-width: 100%;
+    }
+    .gnl-contact-form .to-schedule select{
+        width: 100%;
+    }
+    .gnl-contact-form .send{
+        display: block;
+        margin: 0 auto 50px;
+    }
+}
+
+/*CODIFICACION DE LA PESTAÑA "HOME"*/
+.banner{
+    width: 100%;
+    /*Display de ambos elementos "img" y "div" deben ser iguales para eliminar el espacio entre ellos.*/
+    display: block;
+}
+.back-img-home{
+    background-image: url(../assets/backHome.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home{
+    /* width: 85%; */
+    /* margin: 0 auto; */
+    padding: 0 8%;
+    background: linear-gradient(rgba(254, 254, 254, 0.8), rgba(136, 136, 136, 0.8));
+}
+.main-title{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 45px;
+    clear: left;
+}
+.main-title::before{
+    content: "[ ";
+    text-decoration: line-through;
+}
+.main-title::after{
+    content: " ]";
+    text-decoration: line-through;
+}
+/*SECCION PRINCIPAL*/
+.principal{
+    padding: 30px 0;
+}
+.principal .principal-content .utensils{
+    max-width: 490px;
+    min-width: 320px;
+    width: 40%;
+    float: left;
+    margin: 0 32px 32px 0;
+    box-shadow: 5px 5px 25px 8px black;
+    transition: opacity 400ms;
+}
+.principal .principal-content .utensils:hover{
+    opacity: 0.7;
+}
+.principal .principal-content p{
+    line-height: 2em;
+    margin: 0 0 25px;
+    text-align: justify;
+}
+.principal .principal-content p:last-child{
+    margin: 0;
+}
+/*SECCION UBICACION*/
+.location{
+    padding: 30px 0 40px;
+}
+.location h3{
+    font-weight: normal;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 0 35px;
+}
+.location .location-content{
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/*SECCION DIFERENCIALES*/
+.differentials{
+    padding: 30px 0;
+}
+.differentials .dif-content{
+    text-align: center;
+}
+.differentials .dif-content .dif-list{
+    display : inline-block;
+    margin-right: 30px;
+    min-width: 260px;
+    width: 30%;
+    vertical-align: top;
+    line-height: 1.5;
+    text-align: start;
+}
+.differentials .dif-content .dif-list .items{
+    margin-bottom: 15px;
+}
+.differentials .dif-content .dif-list .items:first-child{
+    font-weight: bold;
+}
+.differentials .dif-content .dif-list .items::before{
+    content: "★ ";
+}
+.differentials .dif-content .dif-img{
+    min-width: 315px;
+    width: 40%;
+    box-shadow: 8px 8px 25px 10px black;
+    transition: opacity 400ms;
+}
+.differentials .dif-content .dif-img:hover{
+    opacity: 0.6;
+}
+/*SECCION CALIDAD Y EXPERIENCIA*/
+.qty-exp{
+    padding: 30px 0 50px;
+}
+.qty-exp .video{
+    max-width: 560px;
+    width: 75%;
+    margin: 0 auto;
+}
+@media screen and (max-width:740px){
+    .principal .principal-content .utensils{
+        float: none;
+        display: block;
+        margin: 0 auto 32px;
+    }
+    .qty-exp .video{
+        min-width: 100%;
+    }
+}
